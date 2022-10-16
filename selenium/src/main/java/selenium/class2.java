@@ -9,6 +9,9 @@ public class class2 {
 		System.out.println("My name is sheetal");
 		System.out.println("My name is sheetal");
 		System.out.println("My name is sheetal");
+		System.out.println("My name is sheetal");
+		System.out.println("My name is sheetal");
+		System.out.println("My name is sheetal");
 	}
 
 }
