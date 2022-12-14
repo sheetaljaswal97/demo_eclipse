@@ -32,7 +32,6 @@ public class excell_sheet {
 		XSSFWorkbook xsf = new XSSFWorkbook(fis);	
 		XSSFSheet sheet = xsf.getSheetAt(0);
 	
-			
 		String data = sheet.getRow(0).getCell(0).getStringCellValue();
 		System.out.println(data);
 		
@@ -41,15 +40,10 @@ public class excell_sheet {
 		driver.get("https://www.google.com/");
 		Thread.sleep(3000);
 		driver.manage().window().maximize();
-		Thread.sleep(2000);
-		
-		driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys(data);
-		
-		Thread.sleep(2000);
-		
-		driver.findElement(By.xpath("//div[@class='wM6W7d']/span[text()='one business consulting group']")).click();
-		
-		
+		Thread.sleep(2000);	
+		driver.findElement(By.xpath("//input[@class='gLFyf gsfi']")).sendKeys(data);		
+		Thread.sleep(2000);		
+		driver.findElement(By.xpath("//div[@class='wM6W7d']/span[text()='one business consulting group']")).click();	
 		Thread.sleep(3000);
 		xsf.close();
 
