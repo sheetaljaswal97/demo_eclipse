@@ -15,40 +15,40 @@ public class broken_links {
 
 	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
-		
+
 		System.setProperty("webdriver.chrome.driver","C:\\Users\\hp\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();
 		driver.get("https://www.softwaretestingmaterial.com");
-		Thread.sleep(3000);
 		driver.manage().window().maximize();
 		Thread.sleep(2000);
-		
-		List<WebElement> list= driver.findElements(By.tagName("a"));
-		
-		System.out.println(list);
-		System.out.println("size of the element is "+list.size());
-		
+		System.out.println("Welcome to amazon website");
+		List<WebElement> list=driver.findElements(By.tagName("a"));
+		System.out.println(list.size());
 		for(int i=0;i<list.size();i++)
 		{
-			String element=list.get(i).getAttribute("href");
-			System.out.println(element);
-			
-			URL link = new URL(element);
-			
-			HttpURLConnection con= (HttpURLConnection) link.openConnection();
-			if(con.getResponseCode()==200)
+			String links=list.get(i).getAttribute("href");
+			System.out.println(links);
+
+			URL url = new URL(links);
+			HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+			if(connection.getResponseCode()==200)
 			{
-				System.out.println("200 status code valid link");
-				System.out.println(element);
+				System.out.println("valid address" +connection.getResponseMessage());
+				System.out.println(links);
 			}
 			else
 			{
-				System.out.println("broken link");
+				System.out.println(links);
 			}
-			
+
 		}
-	
-		}
+
+
+
+
 	}
+}
+
 
 
