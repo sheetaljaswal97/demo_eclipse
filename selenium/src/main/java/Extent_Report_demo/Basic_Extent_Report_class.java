@@ -35,6 +35,7 @@ public class Basic_Extent_Report_class {
 		htmlReporter.config().setReportName("Test Report");
 		htmlReporter.config().setTheme(Theme.STANDARD);
 		htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
+		
 	}
 	
 	@Test

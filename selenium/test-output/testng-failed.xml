@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Extent_Report_demo.Basic_Extent_Report_class">
+      <class name="selenium.data_with_commonmethods">
         <methods>
-          <include name="verifyTitle"/>
-          <include name="verifyEmail"/>
-          <include name="aftertest"/>
           <include name="StartReport"/>
         </methods>
-      </class> <!-- Extent_Report_demo.Basic_Extent_Report_class -->
+      </class> <!-- selenium.data_with_commonmethods -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
