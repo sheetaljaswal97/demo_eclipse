@@ -19,8 +19,7 @@ public class excel_sheetal_data {
 		XSSFSheet sheet=xsf.getSheetAt(0);
 		for(int i=0;i<=1;i++)
 		{
-		String data=sheet.getRow(0).getCell(i).getStringCellValue();
-		
+		String data=sheet.getRow(0).getCell(i).getStringCellValue();		
 		System.out.println(data);
 		}	
 		xsf.close();

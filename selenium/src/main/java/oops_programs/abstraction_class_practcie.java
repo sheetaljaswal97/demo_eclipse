@@ -30,6 +30,7 @@ package oops_programs;
 		second_abs obj = new second_abs();
 		obj.method_one();
 		obj.method_two();
+		System.out.println("sbc");
 				
 		
 
